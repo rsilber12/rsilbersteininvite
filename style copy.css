@@ -1,0 +1,332 @@
+@font-face {
+  font-family: Pro-display-medium;
+  src: url(chirp_regular.otf);
+}
+
+@font-face {
+  font-family: chirp-bold;
+  src: url(Chirp\ Web\ Bold.ttf);
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background: #f1f1f1;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-size: small;
+  background-color: rgb(17, 17, 17, 0.85);
+  padding-top: 15px;
+  padding-bottom: 10px;
+  z-index: 5;
+  backdrop-filter: blur(8px);
+}
+
+@media screen and (max-width: 600px) {
+  header{
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out
+  }
+}
+
+#logo-s{
+  width: 120px;
+}
+
+@media screen and (min-width: 601px) {
+  #logo-s{
+    width: 120px;
+    transition: all 0.3s ease-in-out
+  }
+}
+@media screen and (max-width: 600px) {
+  #logo-s{
+    width: 60px;
+    transition: all 0.3s ease-in-out
+  }
+}
+#footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: pro-display-medium;
+  font-size: small;
+  margin-bottom: 20px;
+}
+
+#footer a{
+  text-decoration: none;
+  color: black;
+  padding-bottom: 20px;
+}
+
+h1{
+  text-align: center;
+  margin-top: 120px;
+  padding-bottom: 40px;
+  font-family: Pro-display-medium;
+  font-weight: lighter;
+  color: black;
+}
+
+@media screen and (min-width: 601px) {
+h1{
+ font-size: 60px;
+  transition: all 0.3s ease-in-out
+}
+}
+@media screen and (max-width: 600px) {
+h1{
+  font-size: 40px;
+  margin-top: 70px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out
+}
+}
+
+.filter-btns{
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  width: 430px;
+  display: block;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+@media screen and (min-width: 601px) {
+  .filter-btns{
+   width: 430px;
+    transition: all 0.3s ease-in-out;
+  }
+  }
+  @media screen and (max-width: 600px) {
+  .filter-btns{
+    width: 300px;
+    top: 200px;
+    transition: all 0.3s ease-in-out;
+  }
+  }
+
+input{
+  display: none;
+}
+
+.filter-btn{
+  font-size: 13px;
+  margin: 0px 0px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  border: none;
+}
+
+@media screen and (min-width: 601px) {
+  .filter-btn{
+  
+    transition: all 0.3s ease-in-out;
+  }
+  }
+  @media screen and (max-width: 600px) {
+  .filter-btn{
+    width: 38px;
+    font-size: 9px;
+    padding-left: 0px;
+    padding-right: 0px;
+    transition: all 0.3s ease-in-out;
+  }
+  }
+
+.filter-btn:active{
+  background-color: white;
+}
+
+.active-btn{
+  background-color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.gallery {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.filter-item {
+  min-width: 300px;
+  max-width: 300px;
+  flex: 1 1 300px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 2rem 0;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.filter-item figure {
+  
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: white;
+}
+@media screen and (min-width: 601px) {
+  .filter-item figure{
+    padding: 20px 20px;
+    transition: all 0.3s ease-in-out
+  }
+}
+@media screen and (max-width: 600px) {
+  .filter-item figure{
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    transition: all 0.3s ease-in-out
+  }
+}
+
+.filter-item figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 601px) {
+  .filter-item figure img{
+    width: 100%;
+    min-height: 300px;
+    transition: all 0.3s ease-in-out
+  }
+}
+@media screen and (max-width: 600px) {
+  .filter-item figure img{
+    width: 85%;
+    display: inline-block;
+    border-radius: 7px;
+    transition: all 0.3s ease-in-out
+  }
+}
+
+.filter-item  .text{
+  position: absolute;
+  z-index:99;
+  color: black;
+}
+
+#link{
+  text-decoration: none;
+}
+
+.text{
+  display: block;
+  text-decoration: none;
+}
+#span{
+  font-size: small;
+  margin-left: 125px;
+  position: relative;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 601px) {
+  #span{
+    margin-left: ;
+    transition: all 0.3s ease-in-out
+  }
+}
+@media screen and (max-width: 600px) {
+  #span{
+    margin-left: 115px;
+    transition: all 0.3s ease-in-out
+  }
+}
+
+h3{
+  font-size: medium;
+  float: left;
+}
+
+@media screen and (min-width: 601px) {
+  h3{
+    margin-left: ;
+    transition: all 0.3s ease-in-out
+  }
+}
+@media screen and (max-width: 600px) {
+  h3{
+    margin-left: 25px;
+    transition: all 0.3s ease-in-out
+  }
+}
+
+p{
+  display: flex;
+  padding-top: 30px;
+  font-size: small;
+  text-decoration: none;
+  color: #000000;
+}
+
+@media screen and (min-width: 601px) {
+  p{
+    margin-left: ;
+    transition: all 0.3s ease-in-out
+  }
+}
+@media screen and (max-width: 600px) {
+  p{
+    margin-left: 25px;
+    transition: all 0.3s ease-in-out
+  }
+}
+
+
+.copy{
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: Pro-display-medium;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .copy{
+    font-size: 10px;
+    transition: all 0.3s ease-in-out
+  }
+}
+@media screen and (max-width: 450px) {
+  .copy{
+    font-size: 10px;
+    transition: all 0.3s ease-in-out
+  }
+}
